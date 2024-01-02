@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { RouterProvider, createBrowserRouter} from 'react-router-dom'
+import AdInsight from './components/AdInsight';
+import Ad1 from './components/Ad1';
+import Ad2 from './components/Ad2';
+import CreateAd from './components/CreateAd';
+import Submit from './components/Submit';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
 
+const App = () => {
+  const appRouter = createBrowserRouter ([
+    {
+        path : "/",
+        element: <AdInsight/>
+    },
+    {
+        path : "/create-add/text",
+        element: <Ad1/>
+    },
+   
+  {
+    path : "/create-add/img",
+    element: <Ad2/>
+},
+{
+  path : "/create-ad",
+  element: <CreateAd/>
+},
+{
+  path : "/submitted",
+  element: <Submit/>
+},
+]);
+return (
+<div>
+    <RouterProvider router={appRouter}/>
+</div>
+);
+};  
 export default App;
