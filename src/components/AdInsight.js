@@ -7,32 +7,32 @@ import Header from './Header';
 
 // Sample raw data
 const rawData = [
-    
-    { campaign: 'A', click: 30, cost:50, conversions: 8, revenue:2000 },
-    { campaign: 'B', click: 50, cost:50, conversions: 5, revenue:3000 },
-    { campaign: 'C', click: 10, cost:50, conversions: 2, revenue:3500 },
-    { campaign: 'D', click: 1000, cost:50, conversions: 9, revenue:4500 },
-    { campaign: 'E', click: 40, cost:50, conversions: 3, revenue:1000 },
-  ];
-  
-  const AdInsight = () => {
-    // State to store chart data
-    const [chartData, setChartData] = useState({
-      labels: rawData.map(item => item.campaign),
-      datasets: [{
-        data: rawData.map(item => item.click),
-        data: rawData.map(item => item.cost),
-        data: rawData.map(item => item.conversions),
-        data: rawData.map(item => item.revenue),
-        
-        
-        backgroundColor: ['#800080', '#36A2EB', '#2AAA8A', '#FFA500', '#FFC0CB'], // Specify colors as needed
-      }],
-    });
-  
-    // Table rendering function
-    const renderTable = () => (
-        <div className="p-20 m-20 border border-gray-500 ">
+
+  { campaign: 'A', click: 30, cost: 50, conversions: 8, revenue: 2000 },
+  { campaign: 'B', click: 50, cost: 50, conversions: 5, revenue: 3000 },
+  { campaign: 'C', click: 10, cost: 50, conversions: 2, revenue: 3500 },
+  { campaign: 'D', click: 1000, cost: 50, conversions: 9, revenue: 4500 },
+  { campaign: 'E', click: 40, cost: 50, conversions: 3, revenue: 1000 },
+];
+
+const AdInsight = () => {
+  // State to store chart data
+  const [chartData, setChartData] = useState({
+    labels: rawData.map(item => item.campaign),
+    datasets: [{
+      data: rawData.map(item => item.click),
+      data: rawData.map(item => item.cost),
+      data: rawData.map(item => item.conversions),
+      data: rawData.map(item => item.revenue),
+
+
+      backgroundColor: ['#800080', '#36A2EB', '#2AAA8A', '#FFA500', '#FFC0CB'], // Specify colors as needed
+    }],
+  });
+
+  // Table rendering function
+  const renderTable = () => (
+    <div className="p-20 m-20 border border-gray-500 ">
       <table>
         <thead>
           <tr>
@@ -54,25 +54,25 @@ const rawData = [
             </tr>
           ))}
         </tbody>
-        
+
       </table>
-      </div>
-    );
-  
-    return (
-        <div>
-            <Header/>
-            <div className="contact-container p-40 pl-10">
-            {/* <div className='pt-20 pb-20'> */}
-      <div className="flex space-between">
-        {renderTable()}
-        <div className="pt-20 m-10 border border-gray-500 ">
-          <Doughnut data={chartData} />
+    </div>
+  );
+
+  return (
+    <div>
+      <Header />
+      <div className="contact-container p-40 pl-10">
+        {/* <div className='pt-20 pb-20'> */}
+        <div className="flex space-between">
+          {renderTable()}
+          <div className="pt-20 m-10 border border-gray-500 ">
+            <Doughnut data={chartData} />
+          </div>
         </div>
       </div>
-      </div>
-      </div>
-    );
-  };
-  
-  export default AdInsight;
+    </div>
+  );
+};
+
+export default AdInsight;
