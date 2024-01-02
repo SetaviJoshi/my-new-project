@@ -19,7 +19,7 @@ const Ad2 = () => {
                 <div class="flex flex-wrap -mx-3 mb-6">
     <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
       <label class="text-gray-700 text-xs font-bold mb-2">
-      Heading 01
+      Heading 01 
       </label>
       <input class="bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"type="text" placeholder="heading 1"/>
       
@@ -95,11 +95,11 @@ const Ad2 = () => {
     </div>
     <div className="options">
                 <ul className="flex p-4 m-4">
-                <div class="flex justify-between ">
+                <div class="flex">
                     <li className="p-4 bg-gray-200 hover:bg-green-400">
                   <Link to ="/"> CANCEL</Link>
                      </li>
-                    <li className="p-4 bg-white hover:bg-orange-400">
+                    <li className="p-4 bg-white hover:bg-yellow-200">
                      <Link to = "/submitted">SUBMIT</Link>
                         </li>
                        </div>

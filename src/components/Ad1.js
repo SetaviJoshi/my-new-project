@@ -76,7 +76,7 @@ const Ad1 = () => {
                     <li className="p-4 bg-gray-200 hover:bg-green-400">
                     <Link to ="/"> CANCEL</Link>
                      </li>
-                    <li className="p-4 bg-white hover:bg-orange-400">
+                    <li className="p-4 bg-white hover:bg-yellow-200">
                      <Link to= "/submitted">   SUBMIT </Link>
                         </li>
                        </div>
